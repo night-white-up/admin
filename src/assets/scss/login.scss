@@ -1,0 +1,184 @@
+.login {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --radius: 2px;
+    --pad: 15px;
+    --dColor: #30b9d4;
+    --fontColor: #333;
+    --lineHeight: 35px;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    margin: 0;
+    padding: 0;
+    font: 16px/20px microsft yahei;
+
+
+    .wrap {
+        width: 100%;
+        height: 100%;
+        padding: 40px 0;
+        position: fixed;
+        opacity: 0.8;
+        display: flex;
+        background: linear-gradient(to bottom right, rgb(0, 21, 42), var(--dColor));
+
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+
+            li {
+                list-style-type: none;
+                display: block;
+                position: absolute;
+                bottom: -120px;
+                width: 15px;
+                height: 15px;
+                z-index: -8;
+                background-color: rgba(255, 255, 255, 0.15);
+                animation: square 25s infinite;
+
+                &:nth-child(1) {
+                    left: 0;
+                    animation-duration: 10s;
+                }
+
+                &:nth-child(2) {
+                    width: 40px;
+                    height: 40px;
+                    left: 10%;
+                    animation-duration: 15s;
+                }
+
+                &:nth-child(3) {
+                    left: 20%;
+                    width: 25px;
+                    height: 25px;
+                    animation-duration: 12s;
+                }
+
+                &:nth-child(4) {
+                    width: 50px;
+                    height: 50px;
+                    left: 30%;
+                    animation-delay: 3s;
+                    animation-duration: 12s;
+                }
+
+                &:nth-child(5) {
+                    width: 60px;
+                    height: 60px;
+                    left: 40%;
+                    animation-duration: 10s;
+                }
+
+                &:nth-child(6) {
+                    width: 75px;
+                    height: 75px;
+                    left: 50%;
+                    animation-delay: 7s;
+                }
+
+                &:nth-child(7) {
+                    left: 60%;
+                    animation-duration: 8s;
+                }
+
+                &:nth-child(8) {
+                    width: 90px;
+                    height: 90px;
+                    left: 70%;
+                    animation-delay: 4s;
+                }
+
+                &:nth-child(9) {
+                    width: 100px;
+                    height: 100px;
+                    left: 80%;
+                    animation-duration: 20s;
+                }
+
+                &:nth-child(10) {
+                    width: 120px;
+                    height: 120px;
+                    left: 90%;
+                    animation-delay: 6s;
+                    animation-duration: 30s;
+                }
+            }
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+
+            h1,
+            h2 {
+                text-align: center;
+                color: #FFFFFF;
+                font-weight: 500;
+                padding: 15px;
+            }
+
+            .ruleForm {
+                width: 320px;
+                margin: auto;
+                padding-top: 15px;
+            }
+
+            input {
+                display: block;
+                height: 36px;
+                border: 0;
+                outline: 0;
+                padding: 6px 10px;
+                line-height: 24px;
+                transition: all 0.4s ease-in 0.1ms;
+
+                &[type="text"],
+                &[type="password"] {
+                    background-color: #FFFFFF;
+                    font-size: 16px;
+                    color: #50a3a2;
+                }
+
+                // &:focus {
+                //     width: 400px;
+                // }
+            }
+
+            .Login {
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: 2px;
+                color: #666666;
+                background-color: #FFFFFF;
+                cursor: pointer;
+
+                // &:hover {
+                //     width: 400px;
+                // }
+            }
+        }
+    }
+}
+
+
+@keyframes square {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        bottom: 100%;
+        transform: rotate(600deg);
+        transform: translateY(-500)
+    }
+}

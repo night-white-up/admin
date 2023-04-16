@@ -1,0 +1,11 @@
+#autocomplete {
+    margin-top: -3px;
+    margin-right: 10px;
+    .el-input__inner {
+        background: rgb(19, 52, 85);
+        color: #fff;
+        border: 1px solid #1e9ef7;
+        // border: 1px solid red;
+        width: 150px;
+    }
+}
